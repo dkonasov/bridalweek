@@ -25,6 +25,7 @@ jQuery('#replypromt').remove();
 jQuery.post('getorders.php', {userid: userid, lastid: lastid}, function(data)
 {
 
+//data=eval(data);
 data=eval(data);
 for(i=0; i<data.length; i++){
 if(i==0){
@@ -69,7 +70,7 @@ console.log(data);
 });
 jQuery.post('getorders.php', {userid: userid, lastid: lastid}, function(data)
 {
-
+console.log(data);
 data=eval(data);
 for(i=0; i<data.length; i++){
 if(i==0){
