@@ -22,7 +22,7 @@ if($login){
 
 $id=getIdByEmail($_POST['username']);
 $user=new User($id);
-$sql = "SELECT * FROM `te_orders` WHERE `id` > ".$user->lastid." AND `type` IN (".$user->keywords.")";
+$sql = "SELECT * FROM `te_orders` WHERE `id` > ".$user->lastid." AND `type` IN (".$user->keywords.") AND `region`='".$user->region."'";
 $r=mysql_query($sql) or die (mysql_error());
 $unread=mysql_num_rows($r);
 }

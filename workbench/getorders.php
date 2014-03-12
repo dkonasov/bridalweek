@@ -15,7 +15,7 @@ $user=new User($_POST['userid']);
 if($_POST['lastid']=='default'){
 
 dbconn('te_userdata');
-$sql='SELECT * FROM `te_orders` WHERE `type` IN ('.$user->keywords.') ORDER BY `id` DESC LIMIT 5';
+$sql="SELECT * FROM `te_orders` WHERE `type` IN (".$user->keywords.") AND `region`='".$user->region."' ORDER BY `id` DESC LIMIT 5";
 $r=mysql_query($sql) or die (mysql_error());
 $output='[ ';
 while($row=mysql_fetch_assoc($r)){
@@ -29,7 +29,7 @@ echo $output;
 } else {
 
 dbconn('te_userdata');
-$sql='SELECT * FROM `te_orders` WHERE `type` IN ('.$user->keywords.') AND `id`<'.$_POST['lastid'].'  ORDER BY `id` DESC LIMIT 5';
+$sql="SELECT * FROM `te_orders` WHERE `type` IN (".$user->keywords.") AND `id`<".$_POST['lastid']." AND `region`='".$user->region."' ORDER BY `id` DESC LIMIT 5";
 $r=mysql_query($sql) or die (mysql_error());
 $output='[ ';
 while($row=mysql_fetch_assoc($r)){

@@ -96,7 +96,7 @@ divclass='singleorder unread';
 divclass='singleorder';
 
 }
-jQuery('#content').append('<div class="'+divclass+'"><span class="orderlabel">Тип события: </span><div class="ordercontent">'+data[i].type+'</div><br/><span class="orderlabel">Сообщение: </span><div class="ordercontent">'+data[i].msg+'</div><br/><span class="orderlabel">Электронная почта: </span><div class="ordercontent">'+email+'</div><button class="sendoffer" data-id="'+data[i].id+'">Ответить</button></div>');
+jQuery('#content').append('<div class="'+divclass+'"><span class="orderlabel">Тип события: </span><div class="ordercontent">'+data[i].type+'</div><br/><span class="orderlabel">Регион: </span><div class="ordercontent">'+data[i].region+'</div><br/><span class="orderlabel">Сообщение: </span><div class="ordercontent">'+data[i].msg+'</div><br/><span class="orderlabel">Электронная почта: </span><div class="ordercontent">'+email+'</div><button class="sendoffer" data-id="'+data[i].id+'">Ответить</button></div>');
 
 if(i==data.length-1){
 oldestid=data[i].id;
@@ -139,7 +139,7 @@ divclass='singleorder unread';
 divclass='singleorder';
 
 }
-jQuery('#content').append('<div class="'+divclass+'"><span class="orderlabel">Тип события: </span><div class="ordercontent">'+data[i].type+'</div><br/><span class="orderlabel">Сообщение: </span><div class="ordercontent">'+data[i].msg+'</div><br/><span class="orderlabel">Электронная почта: </span><div class="ordercontent">'+email+'</div><button class="sendoffer" data-id="'+data[i].id+'">Ответить</button></div>');
+jQuery('#content').append('<div class="'+divclass+'"><span class="orderlabel">Тип события: </span><div class="ordercontent">'+data[i].type+'</div><br/><span class="orderlabel">Регион: </span><div class="ordercontent">'+data[i].region+'</div><br/><span class="orderlabel">Сообщение: </span><div class="ordercontent">'+data[i].msg+'</div><br/><span class="orderlabel">Электронная почта: </span><div class="ordercontent">'+email+'</div><button class="sendoffer" data-id="'+data[i].id+'">Ответить</button></div>');
 
 if(i==data.length-1){
 oldestid=data[i].id;

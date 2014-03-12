@@ -18,7 +18,8 @@ pass=$('#password').val();
 tel=$('#tel').val();
 companyname=$('#companyname').val();
 managername=$('#managername').val();
-jQuery.post('adduserscript.php', {username: user, password: pass, keywords: keywords, tel: tel, companyname: companyname, managername: managername}, function(data)
+region=$('#region').val();
+jQuery.post('adduserscript.php', {username: user, password: pass, keywords: keywords, tel: tel, companyname: companyname, managername: managername, region: region}, function(data)
 {
 
 console.log(data);

@@ -6,7 +6,7 @@ require_once('engine/functions/sanitise.php');
 require_once('engine/classes/order.php');
 require_once('engine/functions/selectrowbykey.php');
 global $DB;
-$order = new Order($_POST["tip"], $_POST["msg"], $_POST["email"], $_POST["showmail"]);
+$order = new Order($_POST["tip"], $_POST["msg"], $_POST["email"], $_POST["showmail"], $_POST['region']);
 $order->placeOrder();
 if($_POST["savemail"]==1){
 dbconn($DB);

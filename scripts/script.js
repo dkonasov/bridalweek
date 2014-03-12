@@ -4,7 +4,8 @@ jQuery('#sendorder').on('click', function(){
 
 tip=jQuery('#tip').val();
 msg=jQuery('#msg').val();
-email=jQuery('#email').val()
+email=jQuery('#email').val();
+region=jQuery('#region').val();
 
 if(jQuery('#savemail').prop('checked')==true){
 
@@ -25,7 +26,7 @@ showmail=1;
 showmail=0;
 
 }
-jQuery.post('sendorder.php',{ tip: tip, msg: msg, email: email, savemail: savemail, showmail: showmail }, function(data)
+jQuery.post('sendorder.php',{ tip: tip, msg: msg, email: email, savemail: savemail, showmail: showmail, region: region }, function(data)
 {
 
 console.log(data);

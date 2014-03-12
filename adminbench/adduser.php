@@ -26,6 +26,11 @@
  <input type="checkbox" id="keywords11" value="Выпускной">Выпускной</input><br/>
  <input type="checkbox" id="keywords12" value="Роматнический Week-end">Роматнический Week-end</input><br/>
   </div>
+  <label>Регион:</label><br/>
+ <select id="region">
+  <option>Москва</option>
+  <option>Санкт-Петербург</option>
+</select><br/>
  Телефон:<br/>
  <input type="text" id="tel"/><br/>
  Наименование организации:<br/>

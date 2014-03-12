@@ -8,6 +8,7 @@ public $email;
 public $lastid;
 public $companyname;
 public $managername;
+public $region;
 function __construct($id) { 
          global $DB;
         dbconn($DB);
@@ -16,10 +17,11 @@ function __construct($id) {
 		$rowdata=selectrowbykey('id', $id, 'te_userdata');
 		$this->email=$row['email'];
 		$this->tel=$rowdata['tel'];
-		$this->keywords=$rowdata['keywords'];
+		$this->keywords=stripslashes($rowdata['keywords']);
 		$this->lastid=$rowdata['lastid'];
 		$this->companyname=$rowdata['companyname'];
 		$this->managername=$rowdata['managername'];
+		$this->region=$rowdata['region'];
     }
 
 }

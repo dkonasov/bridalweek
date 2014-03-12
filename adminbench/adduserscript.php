@@ -12,7 +12,8 @@ $keywords=sanitise($_POST['keywords']);
 $tel=sanitise($_POST['tel']);
 $companyname=sanitise($_POST['companyname']);
 $managername=sanitise($_POST['managername']);
-$sql = "INSERT INTO `te_userdata` (`key`, `id`, `keywords`, `tel`, `companyname`, `managername`) VALUES (NULL, '".$row['id']."', '".$keywords."', '".$tel."', '".$companyname."', '".$managername."');";
+$region=sanitise($_POST['region']);
+$sql = "INSERT INTO `te_userdata` (`key`, `id`, `keywords`, `tel`, `companyname`, `managername`, `region`) VALUES (NULL, '".$row['id']."', '".$keywords."', '".$tel."', '".$companyname."', '".$managername."', '".$region."');";
 mysql_query($sql) or die ('Errlor'.mysql_error());
 echo 'ok';
 

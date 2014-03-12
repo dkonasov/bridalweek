@@ -25,6 +25,11 @@
 <label>Сообщение:</label></br>
 <textarea placeholder="Пожалуйста, опишите Ваше мероприятие" id="msg">
 </textarea><br/>
+<label>Регион:</label><br/>
+ <select id="region">
+  <option>Москва</option>
+  <option>Санкт-Петербург</option>
+</select><br/>
 <label>Адрес электронной почты:</label><br/>
 <input type="text" id="email"/><br/>
 <input type="checkbox" id="savemail" value="yes"/><label for="savemail">Подписаться на рассылку от Bridalweek</label><br/>
