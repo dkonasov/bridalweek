@@ -28,9 +28,7 @@ showmail=0;
 }
 jQuery.post('sendorder.php',{ tip: tip, msg: msg, email: email, savemail: savemail, showmail: showmail, region: region }, function(data)
 {
-
-console.log(data);
-
+alert(data);
 });
 
 });

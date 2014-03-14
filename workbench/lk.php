@@ -36,6 +36,7 @@ $unread=mysql_num_rows($r);
  <title>Bridalweek-вход</title>
  </head>
  <body>
+ <div id="wrapper">
  <?php
  
  if($login){
@@ -49,5 +50,6 @@ $unread=mysql_num_rows($r);
  <div id="topbar"><?php if($login){echo 'Вы вошли как: '.$user->email;} else echo 'Имя пользователя или пароль неверны. <a href="index.php">Попробовать войти еще раз</a>' ?></div>
  <div id="sidebar"><a href="#" id="ordersbutton">Мои заказы(<?php echo $unread; ?>)</a></div>
  <div id="content"></div>
+ </div>
  </body>
 </html>

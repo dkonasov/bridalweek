@@ -18,6 +18,5 @@ $result = mysql_query($q)
     or die("Invalid query: " . mysql_error());
 	}
 }
-echo (count($checkemail));
-
+echo ('Заявка отправлена!');
 ?>

@@ -15,6 +15,11 @@ jQuery('#send').live('click', function(){
 
 jQuery.post('sendofferscript.php', {userid: userid, reply :reply, msg: jQuery('#msg').val()}, function(data){
 
+if(data.result==1) {
+
+alert('Ответ отправлен!');
+
+}
 console.log(data.result);
 
 }, "json");
@@ -44,6 +49,7 @@ email='Почта скрыта';
 }
 if(data[i].id>jQuery('#lastid').val()){
 
+
 divclass='singleorder unread';
 
 } else {
@@ -70,7 +76,6 @@ console.log(data);
 });
 jQuery.post('getorders.php', {userid: userid, lastid: lastid}, function(data)
 {
-console.log(data);
 data=eval(data);
 for(i=0; i<data.length; i++){
 if(i==0){
@@ -118,7 +123,6 @@ console.log('click');
 jQuery('#showmore').remove();
 jQuery.post('getorders.php', {userid: userid, lastid: oldestid}, function(data)
 {
-console.log(data);
 data=eval(data);
 for(i=0; i<data.length; i++){
 if(data[i].showmail==1){
@@ -131,7 +135,7 @@ email='Почта скрыта';
 
 }
 if(data[i].id>jQuery('#lastid').val()){
-
+console.log(data[i].id+' is more than '+ jQuery('#lastid').val());
 divclass='singleorder unread';
 
 } else {
